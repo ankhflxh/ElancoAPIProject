@@ -1,4 +1,5 @@
 "use strict";
+const searchIn = document.querySelector(".search")
 const countriesContainer = document.querySelector(".countries")
 
 const fetchData = async(url, options) => {
@@ -62,16 +63,51 @@ const renderCountry = async(country) =>{
         countriesContainer.style.opacity = 1;
     };
 
+    let allCountries = [];
     countriesData
-        .then((data) => 
-        {
-            console.log({data})
-            data?.data?.map((country)=>{
-                renderCountry(country);
-            })
-        }
-        )
-        .catch((err)=>{
+        .then((data) => {
+            allCountries = data?.data || [];
+            return Promise.all(
+                allCountries.map(async(country) => {
+                    const populationData = await countriesPopulation;
+                    const population = populationData?.data
+                        .find((item) => item?.country.toLowerCase() === country?.name.toLowerCase())
+                        ?.populationCounts.slice(-1)[0]?.value;
+                    renderCountry(country, population);
+                })
+
+            );
+        })
+        .catch((err) => {
             renderError(err);
         });
+
+    searchIn.addEventListener("input", (e) =>{
+        const searchItem = e.target.value.toLowerCase();
+        countriesContainer.innerHTML = "";
+
+        allCountries
+            .filter((country) => country.name.toLowerCase().includes(searchItem))
+            .forEach((filteredCountry) => {
+                console.log({filteredCountry})
+                const populationData = countriesPopulation;
+                populationData
+                    .then((data) => {
+                        const population = data?.data
+                            .find(
+                            (item) => 
+                                item?.country.toLowerCase() === 
+                                filteredCountry?.name.toLowerCase()
+                            )
+                            ?.populationCounts.slice(-1)[0]?.value;
+                            renderCountry(filteredCountry, population);
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching population data:", error);
+                    });
+            });
+    });
+  
+
+        
   
