@@ -6,6 +6,8 @@ const fetchData = async(url, options) => {
     try{
         const response = await fetch(url, options);
 
+        console.log({response})
+
         const responseData = await response.json();
 
         if (response?.ok){
@@ -53,14 +55,12 @@ const renderCountry = async(country) =>{
         </div>
         `;
         countriesContainer.insertAdjacentHTML("beforeend", html);
-        countriesContainer.style.opacity = 1;
         console.log({ population });
         
         });
     };
     const renderError = function(msg){
         countriesContainer.insertAdjacentText("beforeend", msg);
-        countriesContainer.style.opacity = 1;
     };
 
     let allCountries = [];

@@ -4,6 +4,31 @@
   box-sizing: inherit;  
 }
 
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+.topnav a {
+    
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #050c12;
+    color: white;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -11,12 +36,12 @@ html{
 
 body {
     font-family: system-ui;
-    color: #555;
-    background-color: #f7f7f7;
+    color: whitesmoke;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('images/AADB4AFE-6A12-4E6C-AC9D-C4676DBD289B.jpg');
 }
 
 .main {
@@ -37,7 +62,7 @@ body {
     padding: 1rem;
     border-radius: 5px;
     font-size: 1.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(38, 37, 37);
 }
 
 .countries {
@@ -48,13 +73,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     font-size: 2rem;
-    opacity: 0;
     transition: opacity 0.5s;
 }
 
 .country {
     background-color: fff;
-    box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2rem 5rem 1rem rgba(65, 64, 64, 0.986);
     font-size: 1.8rem;
     width: 28rem;
     border-radius: 0.7rem;
@@ -82,7 +106,7 @@ body {
     font-size: 1.4rem;
     margin-bottom:2.5rem;
     text-transform: uppercase;
-    color: #888
+    color: wheat;
 }
 
 .country__row:not(:last-child){
@@ -123,5 +147,5 @@ country__row:last-of-type span {
     width: 40rem;
     margin: 2rem;
     border: 3rem solid white;
-    box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2rem 5rem 1rem wheat(0, 0, 0, 0.1);
 }
