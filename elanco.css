@@ -1,151 +1,150 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;  
+  box-sizing: inherit;
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #e9e9e9;
+  overflow: hidden;
+  background-color: #e9e9e9;
 }
 .topnav a {
-    
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    background-color: #050c12;
-    color: white;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: #050c12;
+  color: white;
 }
 
-.topnav input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+.topnav input[type="text"] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
 }
 
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: system-ui;
-    color: whitesmoke;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('images/AADB4AFE-6A12-4E6C-AC9D-C4676DBD289B.jpg');
+  font-family: system-ui;
+  color: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/AADB4AFE-6A12-4E6C-AC9D-C4676DBD289B.jpg");
 }
 
 .main {
-    margin: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .main {
-    margin: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .search {
-    padding: 1rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    border: 1px solid rgb(38, 37, 37);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: 1px solid rgb(38, 37, 37);
 }
 
 .countries {
-    margin-top: 3rem;
-    gap: 3rem;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 2rem;
-    transition: opacity 0.5s;
+  margin-top: 3rem;
+  gap: 3rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 2rem;
+  transition: opacity 0.5s;
 }
 
 .country {
-    background-color: fff;
-    box-shadow: 0 2rem 5rem 1rem rgba(65, 64, 64, 0.986);
-    font-size: 1.8rem;
-    width: 28rem;
-    border-radius: 0.7rem;
+  background-color: fff;
+  box-shadow: 0 2rem 5rem 1rem rgba(65, 64, 64, 0.986);
+  font-size: 1.8rem;
+  width: 28rem;
+  border-radius: 0.7rem;
 }
 
 .country__img {
-    width: 100%;
-    height:12rem;
-    object-fit: cover;
-    background-color: #eee;
-    border-top-left-radius: 0.7rem;
-    border-top-right-radius: 0.7rem;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  background-color: #eee;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
 }
 
 .country__data {
-    padding: 2.5rem 3.75rem 3rem 3.75rem;
+  padding: 2.5rem 3.75rem 3rem 3.75rem;
 }
 
 .country__name {
-    font-size: 2.7rem;
-    margin-bottom: 0.7rem;
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
 }
 
 .country__region {
-    font-size: 1.4rem;
-    margin-bottom:2.5rem;
-    text-transform: uppercase;
-    color: wheat;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: wheat;
 }
 
-.country__row:not(:last-child){
-    margin-bottom: 1.3rem;
+.country__row:not(:last-child) {
+  margin-bottom: 1.3rem;
 }
 
 .country__row span {
-    display: inline-block;
-    margin-right: 1rem;
-    font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 2.4rem;
 }
 
-country__row:last-of-type span {
-    font-size: 1.7rem;
+.country__row:last-of-type span {
+  font-size: 1.7rem;
 }
 
 .btn-country {
-    border: none;
-    font-size: 2rem;
-    padding: 2rem 5rem;
-    border-radius: 0.7rem;
-    color: white;
-    background-color: orangered;
-    cursor: pointer;
+  border: none;
+  font-size: 2rem;
+  padding: 2rem 5rem;
+  border-radius: 0.7rem;
+  color: white;
+  background-color: orangered;
+  cursor: pointer;
 }
 
 .images {
-    display: flex;
+  display: flex;
 }
 
 .images img {
-    display: block;
-    width: 80rem;
-    margin: 4rem;
+  display: block;
+  width: 80rem;
+  margin: 4rem;
 }
 
 .images img.parallel {
-    width: 40rem;
-    margin: 2rem;
-    border: 3rem solid white;
-    box-shadow: 0 2rem 5rem 1rem wheat(0, 0, 0, 0.1);
+  width: 40rem;
+  margin: 2rem;
+  border: 3rem solid white;
+  box-shadow: 0 2rem 5rem 1rem wheat(0, 0, 0, 0.1);
 }
