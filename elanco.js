@@ -82,11 +82,13 @@ const renderError = function (msg) {
 };
 
 let allCountries = [];
+// Fetching countries' general info and population data, then displaying it for each country.
 countriesData
   .then((data) => {
     allCountries = data?.data || [];
     return Promise.all(
       allCountries.map(async (country) => {
+        // Fetching population data for each country.
         const populationData = await countriesPopulation;
         const population = populationData?.data
           .find(
@@ -94,6 +96,7 @@ countriesData
               item?.country.toLowerCase() === country?.name.toLowerCase()
           )
           ?.populationCounts.slice(-1)[0]?.value;
+        // Displaying the country’s information.
         renderCountry(country, population);
       })
     );
